@@ -1,0 +1,1 @@
+This repository contains the official implementation of the paper "HiSem: Hierarchical Semantic Disentangling for Remote Sensing Image Change Captioning". The code will be released publicly after the paper is accepted.
