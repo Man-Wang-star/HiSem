@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Accepted by IEEE TGRS 2026</strong>
+  <strong>Accepted by IEEE TGRS 2026 🎉🎉🎉</strong>
 </p>
 
 <p align="center">
