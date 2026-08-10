@@ -91,20 +91,7 @@ python preprocess_data.py
 Run the following command to train the model:
 
 ```bash
-python train.py \
-    --data_root /path/to/dataset \
-    --config configs/[CONFIG_FILE].yaml \
-    --output_dir outputs/[EXPERIMENT_NAME]
-```
-
-For multi-GPU training:
-
-```bash
-torchrun \
-    --nproc_per_node=[GPU_NUMBER] \
-    train.py \
-    --data_root /path/to/dataset \
-    --config configs/[CONFIG_FILE].yaml
+python train.py
 ```
 
 ---
@@ -114,15 +101,7 @@ torchrun \
 Evaluate a trained model using:
 
 ```bash
-python test.py \
-    --data_root /path/to/dataset \
-    --checkpoint /path/to/checkpoint.pth
-```
-
-The evaluation results will be saved in:
-
-```text
-outputs/evaluation/
+python test.py
 ```
 
 ---
@@ -142,47 +121,19 @@ outputs/evaluation/
 
 ### Quantitative comparison
 
-| Method | BLEU-4 | METEOR | ROUGE-L | CIDEr |
-|:-------|-------:|-------:|--------:|------:|
-| Baseline A | 0.00 | 0.00 | 0.00 | 0.00 |
-| Baseline B | 0.00 | 0.00 | 0.00 | 0.00 |
-| **Ours** | **0.00** | **0.00** | **0.00** | **0.00** |
+<p align="center">
+  <img src="resource/ablation.png" width="95%" alt="Qualitative Results">
+</p>
 
 ### Qualitative results
 
 <p align="center">
-  <img src="assets/results.png" width="95%" alt="Qualitative Results">
+  <img src="resource/comparison_LEVIR-CC.png" width="95%" alt="Qualitative Results">
 </p>
 
 <p align="center">
-  <em>Qualitative comparison between the proposed method and existing approaches.</em>
+  <img src="resource/comparison_WHU-CDC.png" width="95%" alt="Qualitative Results">
 </p>
-
----
-
-## 📁 Repository Structure
-
-```text
-[REPOSITORY]/
-├── configs/              # Configuration files
-├── datasets/             # Dataset loading and preprocessing
-├── models/               # Model definitions
-├── tools/                # Utility scripts
-├── assets/               # README images
-├── train.py              # Training script
-├── test.py               # Evaluation script
-├── requirements.txt      # Python dependencies
-└── README.md
-```
-
----
-
-## ⚠️ Notes
-
-- The code has been tested with **Python [VERSION]** and **PyTorch [VERSION]**.
-- The recommended CUDA version is **CUDA [VERSION]**.
-- Please update dataset and checkpoint paths before running the scripts.
-- [填写其他可能影响复现结果的重要事项。]
 
 ---
 
