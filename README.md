@@ -10,10 +10,6 @@
 </p>
 
 <p align="center">
-  <strong>Accepted by IEEE TGRS 2026 🎉🎉🎉</strong>
-</p>
-
-<p align="center">
   <a href="https://man-wang-star.github.io/">Man Wang</a>,
   <a href="https://chen-yang-liu.github.io/">Chenyang Liu</a>,
   <strong>Wenjun Li</strong>,
@@ -28,6 +24,10 @@
   <img src="resource/framework.png" width="95%" alt="Framework">
 </p>
 
+<p align="center">
+  <strong>Accepted by IEEE TGRS 2026 🎉🎉🎉</strong>
+</p>
+
 ---
 
 ## ⭐ Introduction
@@ -40,9 +40,7 @@ If this project is helpful to your research, please consider giving it a ⭐.
 
 ---
 
-## 🛠️ Installation
-
-### 1. Clone the repository
+## 🛠️ Installation and Dependencies
 
 ```bash
 git clone https://github.com/Man-Wang-star/HiSem.git
@@ -52,27 +50,6 @@ conda activate HiSem_env
 pip install -r requirements.txt
 ```
 
-### 2. Create the environment
-
-```bash
-conda create -n [ENV_NAME] python=3.9
-conda activate [ENV_NAME]
-```
-
-### 3. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Install additional packages
-
-```bash
-pip install [PACKAGE_NAME]
-```
-
-> **Note:** [填写需要特别说明的 CUDA、PyTorch、操作系统或第三方库版本。]
-
 ---
 
 ## 📂 Data Preparation
@@ -81,36 +58,31 @@ pip install [PACKAGE_NAME]
 
 Download the dataset from the following link:
 
-- [Dataset Name] — [Download Link]
-- [Another Dataset] — [Download Link]
+- <a href="https://github.com/Chen-Yang-Liu/LEVIR-CC-Dataset">LEVIR_CC dataset</a>
+- <a href="https://www.kaggle.com/datasets/yuehaozhang1109/whu-cdc">WHU_CDC dataset</a>
 
-Organize the dataset as follows:
+The LEVIR-CC and WHU-CDC datasets share the same data structure, organized as follows:
 
 ```text
-dataset/
-├── train/
-│   ├── images_A/
-│   ├── images_B/
-│   └── annotations.json
-├── val/
-│   ├── images_A/
-│   ├── images_B/
-│   └── annotations.json
-└── test/
-    ├── images_A/
-    ├── images_B/
-    └── annotations.json
+├─/root/Data/LEVIR_CC/
+        ├─LevirCCcaptions.json
+        ├─images
+             ├─train
+             │  ├─A
+             │  ├─B
+             ├─val
+             │  ├─A
+             │  ├─B
+             ├─test
+             │  ├─A
+             │  ├─B
 ```
 
 ### Data preprocessing
 
 ```bash
-python tools/preprocess.py \
-    --input_path /path/to/raw/dataset \
-    --output_path /path/to/processed/dataset
+python preprocess_data.py
 ```
-
-> **Note:** [填写预处理时需要注意的参数、路径或数据划分方式。]
 
 ---
 
