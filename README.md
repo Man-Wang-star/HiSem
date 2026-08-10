@@ -24,46 +24,19 @@
   <a href="https://scholar.google.com.hk/citations?hl=en&user=kNhFWQIAAAAJ">Zhenwei Shi</a>
 </p>
 
+<p align="center">
+  <img src="resource/framework.png" width="95%" alt="Framework">
+</p>
+
 ---
 
 ## ⭐ Introduction
 
 This repository provides the official implementation of:
 
-> **[Full Paper Title]**
-
-[用一至两段英文介绍论文的研究问题、核心方法和主要贡献。]
-
-The main contributions of this work include:
-
-- **[Contribution 1]**：介绍第一个主要创新点。
-- **[Contribution 2]**：介绍第二个主要创新点。
-- **[Contribution 3]**：介绍实验结果或性能优势。
+> **HiSem: Hierarchical Semantic Disentangling for Remote Sensing Image Change Captioning**
 
 If this project is helpful to your research, please consider giving it a ⭐.
-
----
-
-## 🔥 News
-
-- **[YYYY.MM]** — The source code has been released.
-- **[YYYY.MM]** — The paper has been accepted by **[Journal or Conference]**.
-- **[YYYY.MM]** — The pretrained models have been released.
-- **[YYYY.MM]** — The training and evaluation instructions have been updated.
-
----
-
-## 📢 Overview
-
-<p align="center">
-  <img src="assets/framework.png" width="95%" alt="Framework">
-</p>
-
-<p align="center">
-  <em>Overview of the proposed [Project Name] framework.</em>
-</p>
-
-[在这里简要解释框架图，例如输入、特征提取模块、核心创新模块和最终输出。]
 
 ---
 
@@ -72,8 +45,11 @@ If this project is helpful to your research, please consider giving it a ⭐.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/[USERNAME]/[REPOSITORY].git
-cd [REPOSITORY]
+git clone https://github.com/Man-Wang-star/HiSem.git
+cd HiSem
+conda create -n HiSem_env python=3.9
+conda activate HiSem_env
+pip install -r requirements.txt
 ```
 
 ### 2. Create the environment
