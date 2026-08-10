@@ -106,14 +106,9 @@ python test.py
 
 ---
 
-## 📦 Pretrained Models
+## ⚠️ Notes
 
-| Model | Dataset | Parameters | Performance | Download |
-|:------|:--------|-----------:|------------:|:--------:|
-| [Model A] | [Dataset A] | [XX M] | [Score] | [Link] |
-| [Model B] | [Dataset B] | [XX M] | [Score] | [Link] |
-
-> The pretrained checkpoints are provided for academic research purposes.
+- Please modify the source code of CLIP package, please modify CLIP.model.VisionTransformer.forward() as [<a href="https://github.com/Chen-Yang-Liu/PromptCC/issues/3">this</a>].
 
 ---
 
@@ -142,15 +137,14 @@ python test.py
 If you use this project in your research, please cite:
 
 ```bibtex
-@article{[CITATION_KEY],
-  title   = {[PAPER_TITLE]},
-  author  = {[AUTHOR_LIST]},
-  journal = {[JOURNAL_NAME]},
-  year    = {[YEAR]},
-  volume  = {[VOLUME]},
-  number  = {[NUMBER]},
-  pages   = {[PAGES]},
-  doi     = {[DOI]}
+@article{wang2026hisem,
+  title={HiSem: Hierarchical Semantic Disentangling for Remote Sensing Image Change Captioning},
+  author={Wang, Man and Liu, Chenyang and Li, Wenjun and Ni, Feng and Jia, Bing and Huang, Baoqi and Xia, Riting and Shi, Zhenwei},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  volume={64},
+  pages={5628117--5628117},
+  year={2026},
+  publisher={IEEE}
 }
 ```
 
@@ -160,19 +154,8 @@ If you use this project in your research, please cite:
 
 This project is inspired by or built upon the following repositories:
 
-- [Project A](https://github.com/[OWNER]/[PROJECT_A])
-- [Project B](https://github.com/[OWNER]/[PROJECT_B])
-- [Project C](https://github.com/[OWNER]/[PROJECT_C])
+- [RSCaMa](https://github.com/Chen-Yang-Liu/RSCaMa/tree/main)
 
 We sincerely thank the authors for making their work publicly available.
 
 ---
-
-## 📬 Contact
-
-For questions or suggestions, please contact:
-
-- **Name:** [Your Name]
-- **Email:** [your-email@example.com]
-- **Homepage:** [https://your-homepage.github.io/](https://your-homepage.github.io/)
-- **GitHub:** [https://github.com/USERNAME](https://github.com/USERNAME)
