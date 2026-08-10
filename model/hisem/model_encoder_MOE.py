@@ -156,7 +156,7 @@ class AttentiveEncoder(nn.Module):
         x = x.view(b, c, -1).transpose(-1, 1)  # NLD (b,hw,c)
         return x
 
-    def forward(self, img_A, img_B, cls_label):
+    def forward(self, img_A, img_B, supervised_label):
         h, w = self.h_feat, self.w_feat
         # 1. A B feature from backbone  NLD
         img_A = self.add_pos_embedding(img_A)
@@ -168,7 +168,7 @@ class AttentiveEncoder(nn.Module):
 
         enhanced_sa1, enhanced_sa2 = self.diff_attn(img_sa1, img_sa2)  # NLD
         enhanced_diff = enhanced_sa2 - enhanced_sa1
-        feat_cap_out, cls_logits_out = self.moe(enhanced_sa1, enhanced_sa2, enhanced_diff, cls_label)
+        feat_cap_out, cls_logits_out = self.moe(enhanced_sa1, enhanced_sa2, enhanced_diff, supervised_label)
         feat_cap_out = self.layer_norm(enhanced_sa1 + enhanced_sa2 + feat_cap_out)
         return feat_cap_out, enhanced_diff, cls_logits_out
 
